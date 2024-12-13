@@ -1,3 +1,5 @@
+/* Start Fonts */
+
 @font-face {
   font-family: FunnelSansRegular;
   src: url(../fonts/FunnelSans-Regular.ttf);
@@ -7,6 +9,10 @@
   font-family: FunnelSansLight;
   src: url(../fonts/FunnelSans-Light.ttf);
 }
+
+/* End Fonts */
+
+/* Start General */
 
 html {
     min-height: 100%;
@@ -20,25 +26,91 @@ body {
     min-height: 100vh;
 }
 
+a {
+    color: inherit;
+    width: 100%;
+}
+
+/* End General */
+
+/* Start Colors */
+
+.secondary {
+    color: #939393;
+    font-size: .75em;
+}
+
+.blue {
+    background-color: #0cadea;
+}
+
+.green {
+    background-color: #0cea63;
+}
+
+.yellow {
+    background-color: #eaaa0c;
+}
+
+.red {
+    background-color: #ea190c;
+}
+
+/* End Colors */
+
+/* Start Popup */
+
+.popup {
+    background-color: #1e66af;
+    min-height: 2rem;
+    max-height: 3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    font-family: FunnelSansRegular;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.2);
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.popup-text {
+    flex: 1;
+}
+
+.popup-close {
+    justify-content: flex-end;
+}
+
+.popup-close a {
+    text-decoration: none;
+}
+
+/* End Popup */
+
+/* Start Menu */
+
 .menu {
     background-color: #1e1e1e;
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     padding: 12px;
     font-family: FunnelSansRegular;
     min-height: 3.5vh;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,.2);
+    box-sizing: border-box;
+    width: 100%;
 }
 
 .menu-title {
     flex: 1;
-    justify-content: flex-start;
 }
 
 .menu-search {
     flex: 1;
-    justify-content: center;
 }
 
 .menu-items {
@@ -48,6 +120,16 @@ body {
     gap: 1.5vh;
     justify-content: flex-end;
 }
+
+@media screen and (max-width: 600px) {
+    .menu-search, .menu-items {
+        display: none;
+    }
+}
+
+/* End Menu */
+
+/* Start Inputs */
 
 input[type=text] {
     background-color: #242424;
@@ -67,6 +149,10 @@ input[type=text]:focus {
     outline: none;
 }
 
+/* End Inputs */
+
+/** Start Box **/
+
 .box-area {
     display: flex;
     flex-direction: row;
@@ -83,12 +169,12 @@ input[type=text]:focus {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 43vh;
+    max-width: 17rem;
     background-color: #2d2d2d;
     border-radius: 10px;
     overflow: hidden;
-    min-height: 50vh;
-    max-height: 50vh;
+    min-height: 23rem;
+    max-height: 23rem;
 }
 
 .box-header {
@@ -98,27 +184,24 @@ input[type=text]:focus {
     justify-content: center;
     align-items: center;
     min-height: 5vh;
-    font-size: 3vh;
+    font-size: 1.25rem;
     background-color: #242323;
     width: 100%;
     font-family: FunnelSansRegular;
-    padding: 1.5vh;
-}
-
-.box-header-items {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: .5vh;
 }
 
 .box-description {
     flex: 6;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    padding: 1.5vh;
+    justify-content: center;
+    padding: .75em;
+}
+
+.box-description-item {
+    flex: 1;
 }
 
 .box-actions {
@@ -129,66 +212,40 @@ input[type=text]:focus {
     align-items: center;
     background-color: #242323;
     width: 100%;
-    padding: 1.5vh;
+    padding: .75em;
+}
+
+.box a {
+    text-decoration: none;
 }
 
 .box-actions:hover {
     background-color: #383838;
 }
 
-a {
-    color: inherit;
-    text-decoration: none;
-    width: 100%;
-}
-
-.secondary {
-    color: #939393;
-    font-size: 2vh;
-}
-
 .box-header-item {
     flex: 1;
-}
-
-.box-description-container {
-    flex: 1;
-    flex-direction: column;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
-.box-description-item {
-    flex: 1;
+/* End Box */
+
+/* Start Badges */
+
+.badge-container {
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
 }
 
-.box-description-delimiter {
-    border-bottom: 1px dashed white;
+.badge {
+    padding-left: .5rem;
+    padding-right: .5rem;
+    font-size: .75rem;
+    font-weight: bold;
+    border-radius: .25rem;
 }
 
-.method-get {
-    padding-left: 0.5vh;
-    padding-right: 0.5vh;
-    background-color: #0cadea;
-    border-radius: 10%;
-}
-
-.method-post {
-    padding-left: 0.5vh;
-    padding-right: 0.5vh;
-    background-color: #0cea63;
-    border-radius: 10%;
-}
-
-.method-put {
-    padding-left: 0.5vh;
-    padding-right: 0.5vh;
-    background-color: #eaaa0c;
-    border-radius: 10%;
-}
-
-.method-delete {
-    padding-left: 0.5vh;
-    padding-right: 0.5vh;
-    background-color: #ea190c;
-    border-radius: 10%;
-}
+/* End Badges */
