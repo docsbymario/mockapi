@@ -173,6 +173,12 @@ a {
     }
 }
 
+@media screen and (min-width: 850px) {
+    .mobile {
+        display: none;
+    }
+}
+
 /* End Menu */
 
 /* Start Inputs */
@@ -320,7 +326,7 @@ input[type=text]:focus {
     padding: 1rem;
     border-radius: 10px;
     gap: .25rem;
-    min-height: 9rem;
+    min-height: 7rem;
     transition: all .1s ease-in-out;
 }
 
@@ -375,7 +381,7 @@ input[type=text]:focus {
 .badge {
     padding-left: .5rem;
     padding-right: .5rem;
-    font-size: .8rem;
+    font-size: .75rem;
     font-weight: bold;
     border-radius: .25rem;
 }
