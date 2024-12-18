@@ -10,7 +10,7 @@ phases:
     commands:
       - echo Building the project with Maven...
       - aws s3 cp s3://docsbymario-env/.env ./root/src/main/resources/.env --region eu-north-1
-      - cd root
+      - cd mockapi
       - mvn clean install
   post_build:
     commands:
