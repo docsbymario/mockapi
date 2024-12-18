@@ -9,7 +9,7 @@ public class HomeController {
     @GetMapping("/")
     public ModelAndView getHome() {
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("templates/index.html");
+        modelAndView.setViewName("index.html");
         return modelAndView;
     }
 }
